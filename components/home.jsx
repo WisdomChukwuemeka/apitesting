@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
+
 export const Home = () => {
     const [url, setUrl] = useState('')
     const [data, setData] = useState([])
@@ -51,7 +52,7 @@ export const Home = () => {
             
             <div class='flex justify-center text-center w-full snap-x'>
                     <div class='bg-gradient-to-r bg-black via-gray-700 to-red-700 h-120 md:h-200 w-full flex justify-center text-center m-2 text-black'>
-                        <div class='overflow-y-auto overflow-x-hidden scroll-smooth bg-white h-110 md:h-190 md:w-210 lg:w-[90%] m-2 w-100 '>
+                        <div class='overflow-y-auto overflow-x-auto scroll-smooth bg-white h-110 md:h-190 md:w-210 lg:w-[90%] m-2 w-100 '>
                 {data.map((item, index) => (
                     <div class=' text-center p-3'  key={index}>
                         <div class='text-[0.7rem] md:text-2xl lg:text-4xl'>{JSON.stringify(item)}</div>
